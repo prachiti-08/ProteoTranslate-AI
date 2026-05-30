@@ -216,3 +216,72 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Flask
+instance/
+.flaskenv
+
+# Environment Variables
+.env
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Uploads
+uploads/
+
+# Generated Reports
+reports/
+generated_reports/
+*.pdf
+
+# Database Files
+*.db
+*.sqlite3
+
+# MongoDB Local Data
+data/
+
+# Temporary Files
+temp/
+tmp/
+
+# Build Files
+build/
+dist/
+
+# Cache
+.cache/
+
+# Model Files (if you later add AI models)
+*.h5
+*.pth
+*.pt
+*.ckpt
+
+# Secrets
+secrets.json
+credentials.json
