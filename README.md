@@ -65,7 +65,7 @@ Biological Interpretation
 Research Assistance
 ```
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 ### Backend
 - Python
@@ -181,8 +181,7 @@ LinkedIn - https://www.linkedin.com/in/prachiti-shivalkar-ai/
 
 This project is licensed under the MIT License.
 
----
 
-## ⭐ Acknowledgements
+##  Acknowledgements
 
 This project was developed as part of a bioinformatics and healthcare AI initiative focused on simplifying genomic analysis and biological interpretation through modern computational techniques.
