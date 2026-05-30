@@ -2,15 +2,11 @@
 
 AI-powered bioinformatics platform for DNA analysis, mutation detection, protein translation, biological interpretation, and research assistance.
 
----
-
 ## Overview
 
 ProteoTranslate-AI is a bioinformatics platform designed to bridge the gap between raw genomic data and biological understanding. The system enables users to analyze DNA sequences, detect mutations, translate genetic information into proteins, and generate meaningful biological insights.
 
 The project aims to make genomic analysis accessible for students, researchers, and healthcare professionals through an interactive web-based platform.
-
----
 
 ## Features
 
@@ -48,8 +44,6 @@ The project aims to make genomic analysis accessible for students, researchers, 
 - Genomics Knowledge Assistance
 - Biomedical Information Retrieval
 
----
-
 ## System Architecture
 
 ```text
@@ -70,8 +64,6 @@ Biological Interpretation
       ▼
 Research Assistance
 ```
-
----
 
 ## 🛠️ Technologies Used
 
@@ -99,8 +91,6 @@ Research Assistance
 - Git
 - GitHub
 
----
-
 ## Project Structure
 
 ```text
@@ -123,8 +113,6 @@ ProteoTranslate-AI/
 ├── README.md
 └── .gitignore
 ```
-
----
 
 ## Installation
 
@@ -152,8 +140,6 @@ pip install -r requirements.txt
 python app.py
 ```
 
----
-
 ## Applications
 
 - Genomic Data Analysis
@@ -163,8 +149,6 @@ python app.py
 - Healthcare AI Research
 - Biomedical Data Interpretation
 
----
-
 ## Current Status
 
 | Module | Status |
@@ -173,8 +157,6 @@ python app.py
 | Mutation Analysis Module | ✅ Complete |
 | GenAI Biological Explanation Module | 🚧 In Progress |
 | Research Assistant Module | 🚧 In Progress |
-
----
 
 ## Future Enhancements
 
@@ -186,8 +168,6 @@ python app.py
 - LLM-based Biological Explanations
 - Multi-Omics Data Integration
 
----
-
 ## Author
 
 **Prachiti Shivalkar**
@@ -195,10 +175,9 @@ python app.py
 B.Tech Artificial Intelligence  
 Usha Mittal Institute of Technology (UMIT)  
 SNDT Women's University
+LinkedIn - https://www.linkedin.com/in/prachiti-shivalkar-ai/
 
----
-
-## 📜 License
+## License
 
 This project is licensed under the MIT License.
 
