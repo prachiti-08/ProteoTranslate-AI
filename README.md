@@ -172,10 +172,10 @@ python app.py
 
 **Prachiti Shivalkar**
 
-B.Tech Artificial Intelligence  
-Usha Mittal Institute of Technology (UMIT)  
-SNDT Women's University
-LinkedIn - https://www.linkedin.com/in/prachiti-shivalkar-ai/
+- B.Tech Artificial Intelligence  
+- Usha Mittal Institute of Technology (UMIT)  
+- SNDT Women's University
+- LinkedIn - https://www.linkedin.com/in/prachiti-shivalkar-ai/
 
 ## License
 
