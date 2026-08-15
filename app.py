@@ -10,7 +10,7 @@ import re
 
 app = Flask(__name__)
 
-REPORTS_DIR = "reports"
+REPORTS_DIR = "/tmp/reports"
 os.makedirs(REPORTS_DIR, exist_ok=True)
 
 # MongoDB connection
