@@ -842,3 +842,212 @@ footer {
   padding-left: 20px;
   line-height: 1.8;
 }
+
+/* ================================
+   ABOUT PAGE
+================================ */
+
+.split-section {
+  padding: 80px 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: stretch;
+}
+
+.split-section.reverse {
+  background: var(--bg-soft);
+}
+
+.visual-panel {
+  background: var(--mint);
+  border-radius: 30px;
+  padding: 50px;
+  min-height: 320px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--deep-green);
+
+  box-shadow: var(--shadow-soft);
+}
+
+.visual-panel p {
+  margin: 5px 0;
+}
+
+.content-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 30px;
+  padding: 50px;
+
+  box-shadow: var(--shadow-soft);
+}
+
+.content-panel h2 {
+  font-size: 40px;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.content-panel p {
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.page-info {
+  margin: 80px 7%;
+  padding: 60px;
+  background: var(--lavender);
+  border-radius: 30px;
+  text-align: center;
+}
+
+.page-info h2 {
+  font-size: 40px;
+  letter-spacing: -2px;
+  margin-bottom: 18px;
+}
+
+.page-info p {
+  max-width: 800px;
+  margin: auto;
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* ================================
+   ENQUIRY PAGE
+================================ */
+
+.enquiry-section {
+  padding: 60px 7% 100px;
+}
+
+.enquiry-form {
+  max-width: 850px;
+  margin: auto;
+
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 30px;
+  padding: 45px;
+
+  box-shadow: var(--shadow-soft);
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.enquiry-form label {
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-top: 12px;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  padding: 16px 18px;
+
+  font-family: inherit;
+  font-size: 16px;
+
+  background: #ffffff;
+  color: var(--text-dark);
+
+  outline: none;
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  border-color: var(--deep-green);
+}
+
+.enquiry-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.enquiry-form button {
+  align-self: flex-start;
+
+  margin-top: 20px;
+
+  border: none;
+  cursor: pointer;
+
+  background: var(--text-dark);
+  color: white;
+
+  padding: 14px 28px;
+  border-radius: 999px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.25s ease;
+}
+
+.enquiry-form button:hover {
+  transform: translateY(-3px);
+  background: var(--deep-green);
+}
+
+
+/* ================================
+   CLICKABLE LOGO
+================================ */
+
+.logo {
+  text-decoration: none;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+  .split-section {
+    grid-template-columns: 1fr;
+    padding: 60px 6%;
+  }
+
+  .visual-panel,
+  .content-panel {
+    padding: 30px;
+  }
+
+  .content-panel h2,
+  .page-info h2 {
+    font-size: 32px;
+  }
+
+  .page-info {
+    margin: 60px 6%;
+    padding: 35px 25px;
+  }
+
+  .enquiry-section {
+    padding: 40px 6% 70px;
+  }
+
+  .enquiry-form {
+    padding: 30px;
+  }
+}
