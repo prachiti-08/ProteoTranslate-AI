@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ProteoTranslate | GenAI Explanation</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">ProteoTranslate</div>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/dna-analysis">DNA Analysis</a>
+    <a href="/mutation">Mutation</a>
+    <a href="/genai">GenAI</a>
+    <a href="/research">Research</a>
+  </nav>
+</header>
+
+<section class="page-hero genai-hero">
+  <div>
+    <span class="page-kicker genai-kicker">Phase 03</span>
+
+    <h1>GenAI Biological Explanation</h1>
+
+    <p>
+      Generate plain-English biological interpretation for DNA, protein,
+      and mutation results using biomedical AI reasoning.
+    </p>
+  </div>
+</section>
+
+<section class="analyzer-section">
+
+  <form method="POST">
+    <label class="input-label">DNA Sequence</label>
+    <textarea name="dna_sequence" placeholder="Enter DNA sequence"></textarea>
+
+    <label class="input-label">mRNA Sequence</label>
+    <textarea name="mrna_sequence" placeholder="Enter mRNA sequence"></textarea>
+
+    <label class="input-label">Protein Sequence</label>
+    <textarea name="protein_sequence" placeholder="Enter protein sequence"></textarea>
+
+    <div class="mutation-inputs">
+      <div>
+        <label class="input-label">Original Protein Sequence</label>
+        <textarea name="original_protein" placeholder="Optional: original protein sequence"></textarea>
+      </div>
+
+      <div>
+        <label class="input-label">Mutated Protein Sequence</label>
+        <textarea name="mutated_protein" placeholder="Optional: mutated protein sequence"></textarea>
+      </div>
+    </div>
+
+    <div class="analyzer-buttons">
+      <button type="submit" class="analyze-btn">
+        Generate GenAI Explanation
+      </button>
+    </div>
+  </form>
+
+  {% if errors %}
+  <div class="results-area error-box">
+    <h3>Please fix the following:</h3>
+    <ul>
+      {% for error in errors %}
+      <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if explanation %}
+  <div class="results-area genai-response">
+
+    <div class="result-header">
+      <div>
+        <h3>AI Biological Interpretation</h3>
+        <p>Plain-English explanation generated from submitted biological sequence data.</p>
+      </div>
+
+      <div class="severity-badge">
+        BioGPT / BioBERT Style
+      </div>
+    </div>
+
+    <div class="genai-layout">
+
+      <div class="genai-card ai-summary">
+        <h3>Protein Function Summary</h3>
+        <p>{{ explanation.plain_english_summary }}</p>
+      </div>
+
+      <div class="genai-card function-card">
+        <h3>Biological Role</h3>
+        <p>{{ explanation.biological_role }}</p>
+      </div>
+
+      <div class="genai-card disease-card">
+        <h3>Mutation Interpretation</h3>
+        <p>{{ explanation.mutation_interpretation }}</p>
+      </div>
+
+      <div class="genai-card clinical-card">
+        <h3>Clinical Relevance</h3>
+        <p>{{ explanation.clinical_relevance }}</p>
+      </div>
+
+    </div>
+
+    <h3>Model Explanation Note</h3>
+    <div class="sequence-box">
+      {{ explanation.bio_model_note }}
+    </div>
+
+    <h3>Mutation Type</h3>
+    <div class="sequence-box">
+      {{ explanation.mutation_type }}
+    </div>
+
+    <h3>Possible Protein Impact</h3>
+    <div class="sequence-box impact-box">
+      {{ explanation.possible_protein_impact }}
+    </div>
+
+  </div>
+  {% endif %}
+
+</section>
+
+<footer>
+  <p>© 2026 ProteoTranslate. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

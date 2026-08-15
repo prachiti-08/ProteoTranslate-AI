@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ProteoTranslate | Mutation Analysis</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">ProteoTranslate</div>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Enquiry</a>
+  </nav>
+</header>
+
+<section class="page-hero mutation-hero">
+  <div>
+    <span class="page-kicker">Phase 02</span>
+
+    <h1>Mutation Analysis Module</h1>
+
+    <p>
+      Compare original and mutated DNA sequences to identify nucleotide changes,
+      codon-level changes, amino acid changes, mutation type, and possible protein impact.
+    </p>
+  </div>
+</section>
+
+<section class="analyzer-section">
+
+  <div class="mutation-inputs">
+    <div>
+      <label class="input-label">Original DNA Sequence</label>
+      <textarea id="originalDNA" placeholder="Example: ATGGAATTTTAA"></textarea>
+    </div>
+
+    <div>
+      <label class="input-label">Mutated DNA Sequence</label>
+      <textarea id="mutatedDNA" placeholder="Example: ATGGTTTTTAA"></textarea>
+    </div>
+  </div>
+
+  <div class="analyzer-buttons">
+    <button onclick="loadMutationSample()" class="analyze-btn">Load Sample</button>
+    <button onclick="clearMutation()" class="analyze-btn">Clear</button>
+    <button onclick="analyzeMutation()" class="analyze-btn">Analyze Mutation</button>
+  </div>
+
+
+<div class="results-area mutation-results">
+
+  <div class="result-header">
+    <div>
+      <h3>Mutation Summary</h3>
+      <p>Detected sequence-level and protein-level changes.</p>
+    </div>
+
+    <div class="severity-badge" id="severityBadge">
+      Awaiting Analysis
+    </div>
+  </div>
+
+  <div class="result-grid">
+    <p><strong>Changed Position:</strong> <span id="mutationPosition">---</span></p>
+    <p><strong>Mutation Type:</strong> <span id="mutationType">---</span></p>
+    <p><strong>Original Codon:</strong> <span id="originalCodon">---</span></p>
+    <p><strong>Mutated Codon:</strong> <span id="mutatedCodon">---</span></p>
+    <p><strong>Original Amino Acid:</strong> <span id="originalAmino">---</span></p>
+    <p><strong>Mutated Amino Acid:</strong> <span id="mutatedAmino">---</span></p>
+  </div>
+
+  <h3>Sequence Comparison</h3>
+  <div class="sequence-box comparison-box" id="sequenceComparison">---</div>
+
+  <h3>Changed Nucleotides</h3>
+  <div class="sequence-box" id="changedNucleotides">---</div>
+
+  <h3>Changed Codons</h3>
+  <div class="sequence-box" id="changedCodons">---</div>
+
+  <h3>Possible Protein Impact</h3>
+  <div class="sequence-box impact-box" id="mutationImpact">---</div>
+
+  <div style="margin-top:30px;">
+    <button onclick="generateMutationReport()"
+            class="report-btn">
+        Generate Mutation Report
+    </button>
+</div>
+
+</div>
+
+<footer>
+  <p>© 2026 ProteoTranslate. All rights reserved.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/mutation.js') }}"></script>
+
+</body>
+</html>

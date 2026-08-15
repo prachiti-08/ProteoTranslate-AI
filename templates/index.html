@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ProteoTranslate | Dashboard</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    ProteoTranslate
+  </div>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Enquiry</a>
+  </nav>
+</header>
+
+<section class="hero">
+
+  <div class="hero-text">
+    <h1>GenAI Powered DNA & Protein Intelligence System</h1>
+
+    <p>
+      A modular bioinformatics platform for DNA analysis, mutation detection,
+      AI-powered biological explanation, and research assistance.
+    </p>
+
+    <div class="module-tags">
+      <a href="/dna-analysis" class="module-tag">DNA Analysis</a>
+      <a href="/mutation" class="module-tag">Mutation Analysis</a>
+      <a href="/genai" class="module-tag">GenAI Explanation</a>
+      <a href="/research" class="module-tag">Research Assistant</a>
+    </div>
+  </div>
+
+  <div class="hero-image"></div>
+
+</section>
+
+<section class="module-section">
+  <h2>Our Platform</h2>
+
+  <p class="section-subtitle">
+    Explore each phase of the ProteoTranslate platform.
+  </p>
+
+  <div class="module-grid">
+    <a href="/dna-analysis" class="module-card">
+      <h3>01 DNA Analysis</h3>
+      <p>
+        Transcribe DNA into mRNA, translate codons into proteins,
+        and analyze sequence properties.
+      </p>
+    </a>
+
+    <a href="/mutation" class="module-card">
+      <h3>02 Mutation Analysis</h3>
+      <p>
+        Compare original and mutated DNA sequences to detect mutation type
+        and possible protein impact.
+      </p>
+    </a>
+
+    <a href="/genai" class="module-card">
+      <h3>03 GenAI Biological Explanation</h3>
+      <p>
+        Generate biological explanations for DNA, protein, and mutation results.
+      </p>
+    </a>
+
+    <a href="/research" class="module-card">
+      <h3>04 Research Assistant</h3>
+      <p>
+        Summarize gene, protein, disease, and bioinformatics research topics.
+      </p>
+    </a>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div>
+    <h2>64</h2>
+    <p>Genetic Codons</p>
+  </div>
+
+  <div>
+    <h2>20</h2>
+    <p>Amino Acids</p>
+  </div>
+
+  <div>
+    <h2>4</h2>
+    <p>DNA Bases</p>
+  </div>
+
+  <div>
+    <h2>4</h2>
+    <p>Project Modules</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 ProteoTranslate. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

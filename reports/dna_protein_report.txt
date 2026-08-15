@@ -1,0 +1,3 @@
+DNA Sequence: CACGACTCCGGC
+Protein Sequence: HDSG
+Enzyme Name: Trypsin

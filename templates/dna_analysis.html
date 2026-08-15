@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProteoTranslate</title>
+  <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo"><span></span>ProteoTranslate</div>
+
+  <nav>
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/contact">Enquiry</a>
+</nav>
+</header>
+
+<section class="analyzer-section" id="analyzer">
+  <h2>DNA Sequence Analyzer</h2>
+  <p class="section-subtitle">Paste a DNA sequence to analyze and translate into protein.</p>
+
+  <textarea id="dnaInput" placeholder="Example: ATGCGATTTGGCTAA"></textarea>
+
+  <div class="analyzer-buttons">
+    <button onclick="loadSample()" class="analyze-btn">Load Sample</button>
+    <button onclick="clearInput()" class="analyze-btn">Clear</button>
+    <button onclick="analyzeDNA()" class="analyze-btn">Analyze Sequence</button>
+  </div>
+
+  <div class="results-area">
+    <h3>DNA Analysis</h3>
+
+    <div class="result-grid">
+      <p><strong>Length:</strong> <span id="totalLength">---</span></p>
+      <p><strong>GC Content:</strong> <span id="gcContent">---</span></p>
+      <p><strong>Tm:</strong> <span id="meltingTemp">---</span></p>
+      <p><strong>MW:</strong> <span id="molecularWeight">---</span></p>
+      <p><strong>Total Codons:</strong> <span id="totalCodons">---</span></p>
+      <p><strong>Protein Length:</strong> <span id="proteinLength">---</span></p>
+      <p><strong>Start Codon:</strong> <span id="startCodon">---</span></p>
+      <p><strong>Start Position:</strong> <span id="startPosition">---</span></p>
+      <p><strong>Stop Codon:</strong> <span id="stopCodon">---</span></p>
+      <p><strong>Stop Position:</strong> <span id="stopPosition">---</span></p>
+    </div>
+
+    <h3>Colored DNA Sequence</h3>
+    <div class="sequence-box colored-sequence" id="coloredDNA">---</div>
+
+    <h3>Nucleotide Composition</h3>
+    <div class="result-grid">
+      <p><strong>Adenine (A):</strong> <span id="countA">---</span></p>
+      <p><strong>Thymine (T):</strong> <span id="countT">---</span></p>
+      <p><strong>Guanine (G):</strong> <span id="countG">---</span></p>
+      <p><strong>Cytosine (C):</strong> <span id="countC">---</span></p>
+    </div>
+
+    <h3>mRNA Sequence</h3>
+    <div class="sequence-box" id="mrnaOutput">---</div>
+
+    <h3>Protein Sequence</h3>
+    <div class="sequence-box" id="proteinOutput">---</div>
+
+    <h3>Protein Properties</h3>
+    <div class="result-grid">
+      <p><strong>Residues:</strong> <span id="residueCount">---</span></p>
+      <p><strong>Protein MW:</strong> <span id="proteinMW">---</span></p>
+      <p><strong>Avg Hydropathy:</strong> <span id="avgHydropathy">---</span></p>
+      <p><strong>Character:</strong> <span id="proteinCharacter">---</span></p>
+    </div>
+
+    <h3>Amino Acid Visualization</h3>
+    <div class="amino-bubbles" id="aminoBubbles">---</div>
+
+    <h3>Codon Breakdown</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Codon</th>
+          <th>Amino Acid</th>
+        </tr>
+      </thead>
+      <tbody id="codonTableBody">
+        <tr><td>---</td><td>---</td></tr>
+      </tbody>
+    </table>
+
+    <button onclick="generateReport()" class="report-btn">Generate PDF Report</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 ProteoTranslate . All rights reserved.</p>
+</footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
