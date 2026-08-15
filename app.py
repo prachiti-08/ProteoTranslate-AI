@@ -3,7 +3,6 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from fpdf import FPDF
 from datetime import datetime
-from modules.genai_explainer import generate_genai_explanation
 import os
 import re
 
@@ -204,26 +203,7 @@ def dna_analysis():
 def mutation():
     return render_template("mutation.html")
 
-@app.route("/genai", methods=["GET", "POST"])
-def genai():
-    explanation = None
 
-    if request.method == "POST":
-        dna_sequence = request.form.get("dna_sequence", "").upper().strip()
-        mrna_sequence = request.form.get("mrna_sequence", "").upper().strip()
-        protein_sequence = request.form.get("protein_sequence", "").upper().strip()
-        original_protein = request.form.get("original_protein", "").upper().strip()
-        mutated_protein = request.form.get("mutated_protein", "").upper().strip()
-
-        explanation = generate_genai_explanation(
-            dna_sequence,
-            mrna_sequence,
-            protein_sequence,
-            original_protein,
-            mutated_protein
-        )
-
-    return render_template("genai.html", explanation=explanation)
 
 @app.route("/research")
 def research():
